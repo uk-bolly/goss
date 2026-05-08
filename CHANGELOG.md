@@ -14,3 +14,8 @@
 - go.mod updated
 - Updated workflows for latest Trivy versions and scans
 - Updated release-build.sh script so able to run and test manually
+- Removed Travis CI configuration (.travis.yml) — all CI is now handled by GitHub Actions
+  - Deleted .travis.yml
+  - Removed legacy TRAVIS_TAG env var step from release.yaml (unused dead code)
+  - Removed invalid Travis-style regex branch filter from golangci.yaml
+  - Updated ci/build.sh to remove stale Travis CI comment
